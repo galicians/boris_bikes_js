@@ -1,0 +1,1 @@
+Getting familiar with jasmine testing tool for javascript.

@@ -1,0 +1,427 @@
+needs reviewing http://zsoltfabok.com/blog/2012/08/javascript-foreach/
+
+
+########################################################################
+name = "hello"; // This is a global variable!
+var name = "hello"; // That's better – an instance variable.
+var name; // This creates a variable, like setting something to nil in Ruby.
+In Javascript, you have to specify a return:
+Game.prototype.winner = function() {
+    return player1
+}
+'abc'.toUpperCase    // raises an error
+'abc'.toUpperCase()  // that's better!
+JS uses === for comparisons.
+Here we're defining Player and Game classes.
+
+function Player() {
+    // code goes here
+}
+
+function Game() {
+    // code goes here
+}
+function Player(name) {
+    this.name = name;
+    // Here we're passing in name as an argument and
+    // initialising a player with a name.
+}
+############################  MATCHERS  ###################################
+
+expect(x).toEqual(y); compares objects or primitives x and y and passes if they are equivalent
+
+expect(x).toBe(y); compares objects or primitives x and y and passes if they are the same object
+
+expect(x).toMatch(pattern); compares x to string or regular expression pattern and passes if they match
+
+expect(x).toBeDefined(); passes if x is not undefined
+
+expect(x).toBeUndefined(); passes if x is undefined
+
+expect(x).toBeNull(); passes if x is null
+
+expect(x).toBeTruthy(); passes if x evaluates to true
+
+expect(x).toBeFalsy(); passes if x evaluates to false
+
+expect(x).toContain(y); passes if array or string x contains y
+
+expect(x).toBeLessThan(y); passes if x is less than y
+
+expect(x).toBeGreaterThan(y); passes if x is greater than y
+
+expect(function(){fn();}).toThrow(e); passes if function fn throws exception e when executed
+
+Every matcher's criteria can be inverted by prepending .not:
+
+expect(x).not.toEqual(y); compares objects or primitives x and y and passes if they are not equivalent
+
+
+https://github.com/pivotal/jasmine/wiki/Matchers
+
+
+###############################  TESTS  ####################################
+
+5 Steps of good protocol Javascript testing with Jasmine
+
+STEP 1
+describe({
+    // create the closing brackets to create the description
+});  
+STEP 2
+describe('', function (){
+    // add the quotation marks, comma, function and parenthesis
+});
+STEP 3
+describe('', function (){
+
+    it({
+        // create the closing brackets to create the test
+    });
+
+});  
+STEP 4
+describe('', function (){
+
+    it('', function(){
+        // add the quitation marks, comma, function and parenthesis for the test
+    });
+
+});
+STEP 5
+describe('', function (){
+
+    it('', function(){
+        expect(class.test).to(outcome); // add your expectations and outcome for the test. 
+    });
+
+}); 
+
+
+##########################  JAVASCRIPT SYNTAX  ##############################
+
+
+JavaScript Functions are Objects
+In JavaScript, functions are objects.
+
+JavaScript functions have properties and methods.
+
+You can add your own properties and methods to functions.
+
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript
+
+http://eloquentjavascript.net/1st_edition/contents.html
+
+coffescript vs javascript : https://medium.com/@sagish/node-with-benefits-using-coffeescript-in-your-stack-e9754bf58668
+
+##########################   NODE   ################################
+
+node frameworks:
+http://nodeframework.com/
+
+Node:
+
+installing node from github:
+
+git clone git://github.com/ry/node.git
+cd node
+./configure
+make
+sudo make install
+
+
+
+CREATE NODE PROJECT
+Now that we’re done with the configuration and stuff, let us at least do something to prove that it is working. Start with creating a new file called app.js and add the following lines of code:
+
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('How you doin?\n');
+}).listen(3000, '127.0.0.1');
+console.log('Server running at http://127.0.0.1:3000/');
+And then start the server by running the following command:
+
+node app.js
+To verify that it is working, open a browser and go to http://localhost:3000/ which should show you the resulting message “How you doin?”.
+
+And that is how it’s done!
+
+
+
+first app with node: http://www.stoimen.com/blog/2010/11/19/diving-into-node-js-very-first-app/
+
+http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js?rq=1
+
+http://www.amazon.com/Practical-Node-js-Building-Real-World-Scalable-ebook/dp/B00IGKE2FK/ref=sr_1_2?ie=UTF8&qid=1412936539&sr=8-2&keywords=node
+
+http://www.amazon.com/JavaScript-JQuery-Interactive-Front-End-Development/dp/1118531647/ref=sr_1_1?ie=UTF8&qid=1412936260&sr=8-1&keywords=jquery
+
+
+http://www.intridea.com/blog/2011/4/8/nodejs-jumpstart
+
+more node:
+
+understading node: http://debuggable.com/posts/understanding-node-js:4bd98440-45e4-4a9a-8ef7-0f7ecbdd56cb
+
+diving into node introduction and installation: http://www.stoimen.com/blog/2010/11/16/diving-into-node-js-introduction-and-installation/
+
+diving into node the very first app: http://www.stoimen.com/blog/2010/11/19/diving-into-node-js-very-first-app/
+
+
+notes on javascript:
+
+https://github.com/henryaj/makers-notes/blob/master/javascript.md
+
+jasmine:
+
+http://jasmine.github.io/2.0/introduction.html
+
+installation --> https://github.com/pivotal/jasmine
+
+documentation & quick start --> http://jasmine.github.io/2.0/introduction.html
+
+how do i jasmine --> http://evanhahn.com/how-do-i-jasmine/
+
+describe --> is what we call a suite
+
+it() function --> the spec
+
+the check is called a matcher
+
+For each suite, you can have a bajillion specs for the bajillion tests you want to do.
+
+
+############################  GIT BRANCHING: ########################
+
+http://longair.net/blog/2009/04/16/git-fetch-and-merge/
+
+https://www.atlassian.com/git/tutorials/using-branches/git-merge
+
+
+https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches
+
+you can see your branch --> git branch
+
+git branch development
+git checkout development
+
+
+To create a branch and switch to it at the same time, you can run the git checkout command with the -b switch: git checkout -b development
+
+now:
+ git branch board
+ git checkout board
+ and you commit
+ your branch board has moved forward and has code development doesn't have
+
+ switch back to your master branch.
+
+ if your working directory or staging area has uncommitted changes that conflict with the branch you’re checking out, Git won’t let you switch branches. It’s best to have a clean working state when you switch branches.
+
+
+ To merge it back into your master branch to deploy to production:
+
+ git merge board
+
+ you’ll delete the hotfix branch, because you no longer need it:
+
+ git branch -d board
+
+
+
+
+git history
+
+git pull is feching and merging at the same time
+
+
+
+Doubts im working on development i add, commit and then i merge with test,
+it says already updatodate
+
+commit your changes or stage them before you can switch branches
+
+
+
+
+web generator: http://yeoman.io/
+
+
+#############  MORE JAVASCRIPT  #################
+
+
+JavaScript's types are:
+
+Numbers
+Strings
+Booleans
+Functions
+Objects
+
+Or more complete:
+Number
+String
+Boolean
+Object:
+    Function
+    Array
+    Date
+    RegExp
+Null
+Undefined
+
+> typeof Null
+'undefined'
+> typeof NaN
+'number'
+
+
+string to integer:
+parseInt("123", 10)
+123
+
+
+You can also use the unary + operator to convert values to numbers: > + "42"
+NaN (short for "Not a Number")
+ special values Infinity and -Infinity:
+ "hello".length
+
+ If you declare a variable without assigning any value to it, its type is undefined. 
+
+ To avoid type coercion, use the triple-equals operator:
+
+  != and !== operators.
+  JavaScript has while loops and do-while loops. 
+  for (var i = 0; i < 5; i++) {
+
+  if () {
+
+  } else if () {
+  
+  } else {
+
+  }
+
+&& and || operators use short-circuit logic,
+This is useful for checking for null objects before accessing their attributes:
+
+var name = o && o.getName();
+Or for setting default values:
+var name = otherName || "default";
+JavaScript has a ternary operator for conditional expressions:
+var allowed = (age > 18) ? "yes" : "no";
+
+
+JavaScript objects can be thought of as simple collections of name-value pairs, as hashes in ruby
+The "name" part is a JavaScript string, while the value can be any JavaScript value — including more objects. 
+
+terminal node --> console.log
+process.exit() --> out of node  or .exit
+console.log(process.versions);
+node commands TERMINAL --> http://nodejs.org/api/process.html#process_process_exit_code
+
+function Person(name, age)
+{
+  this.name = name;
+  this.age = age;
+}
+
+//Define a object
+
+var I = new Person("Pablo", 24);
+
+These are semantically equivalent; the second is called object literal syntax, and is more convenient. This syntax is also the core of JSON format and should be preferred at all times.
+
+Once created, an object's properties can again be accessed in one of two ways:
+
+I.name = "Pablo";
+var name = obj.name;
+And...
+
+obj["name"] = "Simon";
+var name = obj["name"];
+
+typeof
+array.push
+
+ someone added new properties to Array.prototype,
+
+for (var i in a) {
+  // Do something with a[i]
+}
+
+If no return statement is used (or an empty return with no value), JavaScript returns undefined.
+
+Array methods tested:
+
+array.toString(), array.join(), array.pop(), array.push(), array.reverse(), array.shift(), array.slice(start, end), a.shift(), a.unshift(1), array.indexOf(), array.lastIndexOf(), test.toString()
+
+
+
+elements.forEach(function(element) {console.log(element);} )
+
+
+JavaScript lets you create anonymous functions.
+
+var avg = function()
+####################################  Array methods to learn #######################################ß
+
+array.toString              array.valueOf
+array.concat                array.every                 array.filter                array.forEach               array.indexOf               array.join
+array.lastIndexOf           array.length                array.map                   array.pop                   array.push                  array.reduce
+array.reduceRight           array.reverse               array.shift                 array.slice                 array.some                  array.sort
+array.splice                array.unshift 
+
+####################################  String methods to learn #######################################ß
+
+string.toString              string.valueOf
+
+string.anchor                string.big                   string.blink                 string.bold                  string.charAt                string.charCodeAt
+string.concat                string.fixed                 string.fontcolor             string.fontsize              string.indexOf               string.italics
+string.lastIndexOf           string.length                string.link                  string.localeCompare         string.match                 string.normalize
+string.replace               string.search                string.slice                 string.small                 string.split                 string.strike
+string.sub                   string.substr                string.substring             string.sup                   string.toLocaleLowerCase     string.toLocaleUpperCase
+string.toLowerCase           string.toUpperCase           string.trim                  string.trimLeft              string.trimRight    
+
+OO in JavaScript
+
+ #############################  JavaScript uses functions as classes.  ##############################
+
+
+
+
+
+Person.prototype is an object shared by all instances of Person. 
+
+any time you attempt to access a property of Person that isn't set, JavaScript will check Person.prototype to see if that property exists there instead. As a result, anything assigned to Person.prototype becomes available to all instances of that constructor via the this object.
+
+This is an incredibly powerful tool. JavaScript lets you modify something's prototype at any time in your program, which means you can add extra methods to existing objects at runtime
+
+Interestingly, you can also add things to the prototype of built-in JavaScript objects. Let's add a method to String that returns that string in reverse:
+
+
+var s = new Person("Simon", "Willison");
+lastNameCaps.call(s);
+// Is the same as:
+s.lastNameCaps = lastNameCaps;
+s.lastNameCaps();
+
+nested functions in JavaScript is that they can access variables in their parent function's scope:
+
+ In JavaScript a namespace is just another object containing methods, properties and objects.
+
+
+
+
+
+
+
+
+
+
+
+
