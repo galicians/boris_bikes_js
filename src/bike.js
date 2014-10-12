@@ -3,9 +3,9 @@ function Bike() {
 }
 
 Bike.prototype.toHaveAccident = function() {
-	return this.broken = true;
+	this.broken = true;
 }
 
 Bike.prototype.toBeFixed = function () {
-	return this.broken = true;
+	this.broken = true;
 }
