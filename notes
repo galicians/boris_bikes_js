@@ -434,6 +434,6 @@ save - Save the current REPL session to a file
 .load - Load a file into the current REPL session.
 .load ./file/to/load.js
 
-
-
+mocha & node modules:
+http://browsenpm.org/package.json
 
