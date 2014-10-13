@@ -23,4 +23,20 @@ describe("docking station", function() {
 		expect(station.releaseBike(bike)).toEqual(bike);
 	});
 
+	it("should provide a list of available bikes", function() {
+		station.dockBike(bike);
+		bikeBroken = new Bike;
+		bikeBroken.toHaveAccident();
+		station.dockBike(bikeBroken);
+		expect(station.availableBikes()).toEqual([bike]);
+	});
+
+	it("should provide a list of broken bikes", function() {
+		station.dockBike(bike);
+		bikeBroken = new Bike;
+		bikeBroken.toHaveAccident();
+		station.dockBike(bikeBroken);
+		expect(station.brokenBikes()).toEqual([bikeBroken]);
+	});
+
 });

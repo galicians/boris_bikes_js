@@ -423,6 +423,8 @@ iterating through arrays in javascript -- > http://stackoverflow.com/questions/9
 - some (stops looping the first time the iterator returns true or something truthy)
 - filter (creates a new array including elements where the filter function returns true and omitting the ones where it returns false)
 - map (creates a new array from the values returned by the iterator function)
+> [].map.call(array, function(x) { return x; });
+> [ 1, 2, 3, 4, 1, 8 ]
 - reduce (builds up a value by repeated calling the iterator, passing in previous values; 
 - reduceRight (like reduce, but works in descending rather than ascending order)
 

@@ -19,7 +19,7 @@ describe("bike", function() {
 	it("after is broken, it can be fixed", function() {
 		bike.toHaveAccident();
 		bike.toBeFixed();
-		expect(bike.broken).toBeTruthy();
+		expect(bike.broken).toBeFalsy();
 	});
 
 

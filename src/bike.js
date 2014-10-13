@@ -7,5 +7,5 @@ Bike.prototype.toHaveAccident = function() {
 }
 
 Bike.prototype.toBeFixed = function () {
-	this.broken = true;
+	this.broken = false;
 }

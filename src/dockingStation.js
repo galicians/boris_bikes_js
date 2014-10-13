@@ -16,3 +16,11 @@ DockingStation.prototype.releaseBike = function(bike) {
 	}
 }
 
+DockingStation.prototype.availableBikes = function() {
+	return [].filter.call(this.bikes, function(bike) { if (!bike.broken) return bike;})
+}
+
+DockingStation.prototype.brokenBikes = function() {
+	return [].filter.call(this.bikes, function(bike) { if (bike.broken) return bike;})
+}
+
