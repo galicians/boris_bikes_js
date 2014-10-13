@@ -37,6 +37,7 @@ describe("docking station", function() {
 	it("should release a bike", function() {
 		station.dockBike(bike);
 		expect(station.releaseBike(bike)).toEqual(bike);
+		expect(station.bikes.length).toEqual(0)
 	});
 
 	it("should provide a list of available bikes", function() {
